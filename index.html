@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab whiteborder">border-radius</div>
+        <div class="tab">background-repeat</div>
+        <div class="tab">background-size</div>
+        <div class="tabContent">
+            <div class="parameter border-radius">Верхній лівий радіус:
+                <input type="range" id="rtl" min="0" max="100" value="0" oninput="equate_to_numbers()">
+                <input type="text" id="ttl" value="0" oninput="equate_to_sliders()">
+            </div>
+            <div class="parameter border-radius">Верхній правий радіус:
+                <input type="range" id="rtr" min="0" max="100" value="0" oninput="equate_to_numbers()">
+                <input type="text" id="ttr" value="0" oninput="equate_to_sliders()">
+            </div>
+            <div class="parameter border-radius">Нижній лівий радіус:
+                <input type="range" id="rbl" min="0" max="100" value="0" oninput="equate_to_numbers()">
+                <input type="text" id="tbl" value="0" oninput="equate_to_sliders()">
+            </div>
+            <div class="parameter border-radius">Нижній правий радіус:
+                <input type="range" id="rbr" min="0" max="100" value="0" oninput="equate_to_numbers()">
+                <input type="text" id="tbr" value="0" oninput="equate_to_sliders()">
+            </div>
+            <div class="double-container">
+                <div id="block"></div>
+                <div id="code1">
+                    <span id="codeblue">border-radius</span><span id="codewhite">: </span><span id="codegreen"></span><span id="codewhite">;</span>
+                </div>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div class="double-container">
+                <div>
+                    <div class="parameter"><input type="radio" class="radio1" value="repeat" checked><span>Repeat</span></div>
+                    <div class="parameter"><input type="radio" class="radio1" value="repeat-x"><span>Repeat-x</span></div>
+                    <div class="parameter"><input type="radio" class="radio1" value="repeat-y"><span>Repeat-y</span></div>
+                    <div class="parameter"><input type="radio" class="radio1" value="space"><span>Space</span></div>
+                    <div class="parameter"><input type="radio" class="radio1" value="no-repeat"><span>No-repeat</span></div>
+                    <div class="parameter"><input type="radio" class="radio1" value="round"><span>Round</span></div>
+                </div>
+                <div class="photo-container">
+                    <div id="photo-example" style="background-repeat: repeat;"></div>
+                </div>
+            </div>
+            <div id="code2">
+                    <span id="codeblue">background-repeat</span><span id="codewhite">: </span><span id="codebrown"></span><span id="codewhite">;</span>
+            </div>
+        </div>
+        <div class="tabContent bgsize">
+            <div class="double-container">
+                <div>
+                    <div class="parameter"><input type="radio" class="radio2" value="contain" checked><span>Contain</span></div>
+                    <div class="parameter"><input type="radio" class="radio2" value="cover"><span>Cover</span></div>
+                    <div class="parameter"><input type="radio" class="radio2" value="size%"><input type="range" id="bgsze_slider" min="1" max="100" value="50" oninput="equate_to_number()"> <input type="text" id="bgsze_number1" value="50" style="width: 30px; text-align: right;" oninput="equate_to_slider()"> %</div>
+                    <div class="parameter"><input type="radio" class="radio2" value="sizepx">
+                        <ul>
+                            <li>Width: <input type="number" id="bgsze_numberW" value="50" style="width: 30px;" oninput="regenerate_from_number()"> px</li>
+                            <li>Height: <input type="number" id="bgsze_numberH" value="50" style="width: 30px;" oninput="regenerate_from_number()"> px</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="photo-container">
+                    <div id="photo-example1" style="background-repeat: repeat;"></div>
+                </div>
+            </div>
+            <div id="code2">
+                <span id="codeblue">background-size</span><span id="codewhite">: </span><span id="codebrown1"></span><span id="codegreen1"></span><span id="codewhite">;</span>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
